@@ -1,6 +1,6 @@
-# myvuecli
+# JF_BANK
 
-> 一个本地的vue项目初始化包
+> 一个vue项目，谆享教育制作的关于积分银行的项目[仅前端代码]
 
 ## Build Setup
 
