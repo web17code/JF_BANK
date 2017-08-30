@@ -52,19 +52,23 @@
     .ivu-col{
       transition: width .2s ease-in-out;
     }*/
+  .menu_icon {
+    position: relative;
+    bottom: -2px;
+  }
 </style>
 <template>
   <Row>
     <i-col :span="24">
-      <Menu active-name="1" theme="light" width="auto" mode="vertical" @on-select="gorouter">
-        <Menu-item name="1">
-          <span>选项 1</span>
-        </Menu-item>
-        <Menu-item name="P_Login">
-          <span>登录</span>
-        </Menu-item>
-        <Menu-item name="3">
-          <span>选项 3</span>
+      <Menu :active-name="$route.name[0]"
+            theme="light" width="auto" mode="vertical"
+            @on-select="gorouter"
+            v-for="menu in MenuData" :key="menu.menuUrl">
+        <Menu-item :name="menu.menuUrl"
+                   style="padding:0;padding-left:15px;line-height: 50px;">
+          <Icon :type="menu.menuIcon" :size="20" color="#585E62"
+                class="menu_icon"></Icon>
+          <span style="">{{menu.menuName}}</span>
         </Menu-item>
       </Menu>
     </i-col>
@@ -72,21 +76,26 @@
 </template>
 <script>
   export default {
-    data () {
+    data: function () {
       return {
-        spanLeft: 5,
-        spanRight: 19
+        MenuData: window.MenuData
       }
     },
-    props: {
-      activeName: {
-        default: "",
+    created: function () {
+      //先从window.MenuData数组获取，若window.MenuData[0].name==initMenu,请求菜单
+      if (window.MenuData[0].menuName != "initMenu") {
+        return true;
+      } else {
+        //获取菜单数据，并存到window中
+        this.$http.get(window.getHost + 'menu/userMenu').then(
+          function (data) {
+            this.MenuData = window.MenuData = data.data.data;
+          })
       }
     },
     methods: {
       gorouter: function (name) {
         //this.$nextTick(function(){this.isnew=true})//重建组件
-        console.log(name);
         this.$router.push(name);//路由跳转
       }
     }

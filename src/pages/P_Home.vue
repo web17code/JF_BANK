@@ -8,9 +8,8 @@
 <template>
   <div>
     <Row>
-      <Col span="4"><leftMenu></leftMenu></Col>
-      <Col span="20" class="content">
-        hello world!!
+      <Col span="24" class="content">
+      hello world!!
       </Col>
     </Row>
   </div>
@@ -21,6 +20,8 @@
   export default {
     data: function () {
       return {}
+    },
+    mounted: function () {
     },
     components: {
       leftMenu: leftMenu
