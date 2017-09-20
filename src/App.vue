@@ -96,6 +96,7 @@
           <Breadcrumb>
             <Breadcrumb-item >积分银行</Breadcrumb-item>
             <Breadcrumb-item >{{$route.name[1]}}</Breadcrumb-item>
+            <a href="/logout.jsp" style="float: right;color: #666;">注销</a>
           </Breadcrumb>
         </div>
         <div class="layout-content">

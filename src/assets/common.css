@@ -1,8 +1,209 @@
-.pageCss{
-  margin-top:20px;
-  margin-left:20px;
-}
-.ApplicationCard .ivu-card-body {
-  padding: 10px!important;
+.clearBoth:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
+.pageCss {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.ApplicationCard .ivu-card-body {
+  padding: 10px !important;
+}
+
+/*账户资金详情start*/
+.detail_header {
+  height: 220px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.detail_header .header_left {
+  width: 60%;
+  height: 100%;
+  padding-left: 30px;
+  padding-top: 30px;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #666;
+}
+
+.detail_header .header_right {
+  width: 39%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  border: 1px solid #666;
+}
+
+.detail_header .header_left .p1_title {
+  font-weight: bold;
+  font-size: 20px;
+  height: 50px;
+  color: #333;
+}
+
+.detail_header .header_left .div2 {
+  overflow: hidden;
+}
+
+.detail_header .header_left .div2_p1 {
+  display: block;
+  margin-right: 100px;
+  float: left;
+  font-weight: bold;
+  font-size: 30px;
+  color: #FF9900;
+}
+
+.detail_header .header_left .div2_span1 {
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+}
+
+.detail_header .header_left .div2_btn {
+  margin-left: 10px;
+  display: block;
+  float: left;
+  margin-top: 7px;
+}
+
+.detail_header .header_left .p3 {
+  margin-top: 35px;
+}
+
+.detail_header .header_left .p3 .txt {
+  color: #333;
+  font-size: 14px;
+}
+
+.detail_header .header_left .p3 .m_in {
+  font-size: 18px;
+  color: #3cc;
+}
+
+.detail_header .header_left .p3 .m_out {
+  font-size: 18px;
+  color: #ff9900;
+}
+
+.toolContent {
+  padding-bottom: 10px;
+}
+
+.toolContent > span:first-child {
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+  bottom: -4px;
+}
+
+.toolContent > span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tool_btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 0px 15px;
+  line-height: 31px;
+  position: relative;
+  bottom: -1px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: color .2s linear, background-color .2s linear, border .2s linear;
+  cursor: pointer;
+}
+
+.tb_select {
+  color: #fff;
+  background-color: #2D8CF0;
+  border: none;
+}
+
+.tptxt {
+  color: #333333;
+  font-weight: bold;
+}
+
+.m_outTxt {
+  color: #ff9900;
+  font-weight: bold;
+}
+
+.m_inTxt {
+  color: #3cc;
+  font-weight: bold;
+}
+
+/*账户资金详情end*/
+/*首页css Start*/
+.headerRow {
+  width: 65%;
+  height:220px;
+  padding-left: 25px;
+  padding-top: 30px;
+  border: 1px solid #aaa;
+}
+.indexHeaderLeft {
+  overflow: hidden;
+}
+.indexAvatar {
+  float: left;
+}
+.indexHeaderLeft .indexAvatar img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  border: 2px solid #999;
+  border-radius: 50%;
+}
+.indexHeaderLeft .indexInfo {
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 15px;
+  float: left;
+}
+.indexHeaderLeft .indexInfo .info_name{
+  line-height: 45px;
+}
+.indexHeaderLeft .indexInfo .info_role{
+  line-height: 45px;
+}
+.indexHeaderLeft .indexTotal{
+  margin-top:20px;
+  padding-left: 5px;
+  min-width: 100px;
+  float:left;
+  text-align: center;
+}
+.indexHeaderLeft .indexTotal>span{
+  font-weight: bold;
+  font-size: 28px;
+  color: #FF9900;
+}
+.headerRow .indexHeaderLeft .p3 .txt {
+  color: #333;
+  font-size: 14px;
+}
+
+.headerRow .indexHeaderLeft .p3 .m_in {
+  font-size: 18px;
+  color: #3cc;
+}
+
+.headerRow .indexHeaderLeft .p3 .m_out {
+  font-size: 18px;
+  color: #ff9900;
+}
+.headerRow .indexHeaderRight{
+  padding-top:65px;
+}
+/*首页css end*/

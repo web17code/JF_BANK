@@ -3,9 +3,9 @@
 
 <template>
   <div>
-
     <!--应用列表-->
-    <Table border :columns="columns" :data="dataList"></Table>
+    <Table border :columns="columns" :data="dataList"
+           :no-data-text="''"></Table>
     <!--分页-->
     <Page :total="total" :current="current"
           :page-size="10"
@@ -35,8 +35,8 @@
             key: 'createDate'
           },
           {
-            title: '总资产',
-            key: 'menuUrl'
+            title: '总资产（金币）',
+            key: 'money'
           },
           {
             title: '操作',
@@ -44,7 +44,12 @@
             render: (h, params) => {
               return h('router-link', {
                 props: {
-                  to: { path: 'ApplicationDetail', query: { Id: params.row.appId }},
+                  to: { path: 'ApplicationDetail',
+                        query: {
+                                  Id: params.row.appId,
+                                  name:params.row.appName
+                        }
+                      },
                 }
               }, '查看详情');
             }
