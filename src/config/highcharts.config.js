@@ -258,7 +258,7 @@ var options = {
         cursor: 'pointer',
         dataLabels: {
           enabled: true,
-          formatter:function(){return this.point.name+":"+this.point.y}
+          formatter:function(){return this.point.name+"<br>"+this.point.y}
         },
         size:"70%",
         showInLegend: true

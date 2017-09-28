@@ -13,8 +13,6 @@ import Application from '../pages/Application.vue'
 import ApplicationShow from '../pages/ApplicationShow.vue'
 import ApplicationDetail from '../pages/ApplicationDetail.vue'
 import userCount from '../pages/userCount.vue'
-//import userCount_T from '../pages/userCount_T.vue'
-import userCount_S from '../pages/userCount_S.vue'
 import Transfer from '../pages/Transfer.vue'
 import error from '../pages/error.vue'
 
@@ -46,11 +44,6 @@ export default new Router({
       path: '/userCount',
       name: ['userCount', '个人账户'],
       component: userCount
-    },
-    {
-      path: '/userCount_S',
-      name: ['userCount_S', '个人账户'],
-      component: userCount_S
     },
     {
       path: '/PutOnList',
