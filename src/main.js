@@ -10,8 +10,8 @@ import './assets/common.css'
 import utils from "./utils/utils.js";
 
 Vue.config.productionTip = false
-window.getHost = "http://192.168.1.217:80/school-bank-web/";
-//window.getHost = "http://192.168.1.110/school-bank-web/";
+//window.getHost = "http://192.168.1.217:80/school-bank-web/";
+window.getHost = "http://192.168.1.131/school-bank-web/";
 //window.getHost = "http://192.168.1.111/bank/";
 
 window.MenuData = [{menuName: "initMenu", menuUrl: "", menuIcon: ""}];
