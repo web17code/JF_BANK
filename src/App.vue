@@ -97,6 +97,9 @@
             <Breadcrumb-item >积分银行</Breadcrumb-item>
             <Breadcrumb-item >{{$route.name[1]}}</Breadcrumb-item>
             <a href="logout.jsp" style="float: right;color: #666;">注销</a>
+            <a style="float: right;color: #666;padding-right: 15px;cursor: default;">
+              {{nowName}}
+            </a>
           </Breadcrumb>
         </div>
         <div class="layout-content">
@@ -115,18 +118,31 @@
   import leftMenu from "./components/leftMenu.vue"
   export default {
     data () {
-      return {}
+      return {
+        Url_acountInfo: "money/account",
+        nowName:""
+      }
     },
-    computed: {},
     methods: {
       goRouter: function (name) {
         this.$router.push({path: name})
         //this.$router.push({path: name, query: {user: "zhuhj"}})
         //this.$router.push({path: name, params:{user: "zhuhj"}})
+      },
+      getAccountInfo: function () {
+        var that = this;
+        this.$http.post(window.getHost + "money/account",
+          {},
+          {emulateJSON: true}).then(function (data) {
+            that.nowName = data.data.data.XM;
+        })
       }
     },
     components: {
       leftMenu: leftMenu
+    },
+    created:function () {
+      this.getAccountInfo();
     }
   }
 </script>

@@ -25,13 +25,13 @@
           <img :src="indexInfo.avatarUrl" alt="头像">
         </div>
         <div class="indexInfo">
-          <p class="info_name">{{indexInfo.USERNAME}}</p>
+          <p class="info_name">{{indexInfo.XM}}</p>
           <p class="info_role">{{indexInfo.role}}</p>
         </div>
       </div>
-      <div class="indexTotal"><span>{{indexInfo.balance}}&nbsp;</span>金币</div>
+      <!--<div class="indexTotal"><span>{{indexInfo.balance}}&nbsp;</span>金币</div>-->
       </Col>
-      <Col span="10" class="indexHeaderRight">
+      <Col span="9" class="indexHeaderRight">
       <router-link
         :to="{path:'/PutOnList',query:{adminName:indexInfo.USERNAME}}">
         <Button type="ghost" style="width:80px;">投放</Button>

@@ -37,12 +37,12 @@
       v-model="showModalOut"
       @on-ok="sendOutNum"
       title="投放">
-      请输入投放金额：
+      投放金额：
       <InputNumber v-model="OutNum"
                    :min="0"
                    @on-change="changeOutNum"></InputNumber>
       <br>
-      回款备注：
+      投放备注：
       <Input style="width:70%;margin-top:10px;"
              v-model="sendNumContent"></Input>
     </Modal>
