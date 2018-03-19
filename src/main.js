@@ -28,6 +28,6 @@ Vue.http.interceptors.push(function(request, next) {//拦截器
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
+  template: '<App/>', 
   components: {App}
 })
